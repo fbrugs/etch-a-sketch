@@ -9,6 +9,7 @@ body {
     align-items: center;
     flex-direction: column;
     gap: 30px;
+    background-color: gray;
 }
 
 .canvas {
@@ -17,6 +18,7 @@ body {
     border: 2px solid black;
     display: flex;
     flex-direction: column;
+    background-color: white;
 }
 
 .row {

@@ -1,12 +1,10 @@
 let gridSize = 0;
-const x = Number(document.querySelector("input").value)
 
 const canvas = document.querySelector(".canvas");
-
-const colors = ['green', 'red', 'blue', 'orange', 'teal', 'brown', 'black', 'yellow']
+const colors = ['green', 'red', 'blue', 'orange', 'teal', 'brown', 'black', 'yellow'];
 
 function random(arrlength) {
-    return Math.floor(Math.random() * arrlength)
+    return Math.floor(Math.random() * arrlength);
 }
 
 function createGrid(size) {
@@ -15,14 +13,18 @@ function createGrid(size) {
         column.classList.add("col");
         column.id = i + 1;
 
+        column.addEventListener("mouseover", (e) => {
+            const child = e.target;
+            child.style.backgroundColor = 'black';
+        })
+
         for (let y = 0; y < size; y++) {
             const row = document.createElement("div");
-            row.classList.add("row")
-            row.style.backgroundColor = colors[random(colors.length)]
+            row.classList.add("row");
             column.appendChild(row);
         }
 
-        canvas.appendChild(column)
+        canvas.appendChild(column);
     }
 }
 
@@ -33,8 +35,6 @@ confirmButton.addEventListener("click", (e) => {
     deleteColumns.forEach((item) => {
         item.remove();
     })
-    gridSize = document.querySelector("input").value
-    createGrid(gridSize)
+    gridSize = document.querySelector("input").value;
+    createGrid(gridSize);
 });
-
-console.log(canvas)
