@@ -8,10 +8,24 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <div class="head-info">
+        <h1> Your favorite canvas!</h1>
+        <p>Grid min size is 10 and max size is 80, this is done for performance issues!</p>
+    </div>
     <div class="canvas"></div>
     <div class="controls">
         <input value="" placeholder="Grid size">
         <button class="confirm-button">Set</button>
+        <div class="options">
+            <div class="opacity-checkbox">
+                <input type="checkbox" class="opacity">
+                <p>Opacity</p>
+            </div>
+            <div class="rgb-checkbox">
+                <input type="checkbox" class="rgb">
+                <p>RGB</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
